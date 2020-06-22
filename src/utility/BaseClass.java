@@ -10,5 +10,6 @@ public class BaseClass {
     static {
         System.setProperty("webdriver.chrome.driver", "/Users/yavuzaydin/Desktop/selenium/chromedriver 2");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 }
