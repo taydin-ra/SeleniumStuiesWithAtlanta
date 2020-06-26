@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import utility.BaseClass;
 
+import java.util.List;
+
 public class SelectReview extends BaseClass {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         driver.get("http://newtours.demoaut.com/mercuryreservation.php");
 
         driver.manage().window().maximize();
@@ -42,8 +44,20 @@ public class SelectReview extends BaseClass {
         WebElement passCount = driver.findElement(By.cssSelector("select[name='passCount']"));
         passCount.click();
 
-        Select select = new Select(passCount);
+        Select select = new Select(passCount);  // dropdown menu
         select.selectByVisibleText("3");
+
+        WebElement departFrom = driver.findElement(By.xpath("//select[@name='fromPort']"));
+
+        Select depart = new Select(departFrom);
+        depart.selectByIndex(4);
+        depart.selectByVisibleText("London");
+
+        WebElement month =driver.findElement(By.cssSelector("select[name='fromMonth']"));
+        Select select1 = new Select(month);
+        select1.selectByVisibleText("February");
+       
+
 
 
     }
