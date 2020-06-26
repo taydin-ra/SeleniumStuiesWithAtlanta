@@ -42,22 +42,53 @@ public class SelectReview extends BaseClass {
 //        WebElement passCount=driver.findElement(By.cssSelector("select[name='passCount'] >option[value='3']"));
 //        passCount.click();
         WebElement passCount = driver.findElement(By.cssSelector("select[name='passCount']"));
+
         passCount.click();
 
         Select select = new Select(passCount);  // dropdown menu
+
         select.selectByVisibleText("3");
 
         WebElement departFrom = driver.findElement(By.xpath("//select[@name='fromPort']"));
 
         Select depart = new Select(departFrom);
+
         depart.selectByIndex(4);
+
         depart.selectByVisibleText("London");
 
-        WebElement month =driver.findElement(By.cssSelector("select[name='fromMonth']"));
-        Select select1 = new Select(month);
-        select1.selectByVisibleText("February");
-       
+        WebElement month = driver.findElement(By.cssSelector("select[name='fromMonth']"));
 
+        Select select1 = new Select(month);
+
+        select1.selectByVisibleText("February");
+
+        WebElement fromDay = driver.findElement(By.xpath("//select[@name='fromDay']"));
+
+        Select selectDay = new Select(fromDay);
+
+        selectDay.selectByValue("17");
+
+        WebElement toPort = driver.findElement(By.cssSelector("select[name='toPort']"));
+
+        Select select2 = new Select(toPort);
+
+        select2.selectByVisibleText("New York");
+
+        WebElement firstClass = driver.findElement(By.cssSelector("input[value='First']"));
+
+        firstClass.click();
+
+        WebElement airline = driver.findElement(By.cssSelector("select[name='airline']"));
+
+        Select select3 = new Select(airline);
+
+        select3.selectByVisibleText("Unified Airlines");
+
+        select3.selectByIndex(3);
+        
+        WebElement continueButton=driver.findElement(By.xpath("//input[@type='image']"));
+        continueButton.click();
 
 
     }
