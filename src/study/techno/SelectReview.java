@@ -86,7 +86,7 @@ public class SelectReview extends BaseClass {
         select3.selectByVisibleText("Unified Airlines");
 
         select3.selectByIndex(3);
-        
+
         WebElement continueButton=driver.findElement(By.xpath("//input[@type='image']"));
         continueButton.click();
 
