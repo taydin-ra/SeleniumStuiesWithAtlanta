@@ -8,6 +8,9 @@ import utility.BaseClass;
 import java.util.List;
 
 public class SelectReview extends BaseClass {
+    /*
+    if the price is greater than 300 click on that airline
+     */
     public static void main(String[] args) throws InterruptedException {
         driver.get("http://newtours.demoaut.com/mercuryreservation.php");
 
@@ -86,10 +89,27 @@ public class SelectReview extends BaseClass {
         select3.selectByVisibleText("Unified Airlines");
 
         select3.selectByIndex(3);
-
-        WebElement continueButton=driver.findElement(By.xpath("//input[@type='image']"));
+//input[@name='outFlight']/../../following-sibling::tr//b[contains(text(),'Price')]
+        //td//b[contains(text(),'Price')]
+        WebElement continueButton = driver.findElement(By.xpath("//input[@type='image']"));
         continueButton.click();
+        List<WebElement> radio = driver.findElements(By.xpath("//input[@type='radio']"));
+        System.out.println(radio.size());
 
-
+        List<WebElement> pr = driver.findElements(By.xpath("//input[@name='outFlight']/../../following-sibling::tr//b[contains(text(),'Price')]"));
+        System.out.println(pr.size());
+        for (int i = 0; i < pr.size(); i++) {
+           // System.out.println(pr.get(i).getText());
+            String s = pr.get(i).getText();
+            s = s.replace("Price: $", "");
+            int a = Integer.parseInt(s);
+           // System.out.println(a);
+            if (a <274) {
+              radio.get(i).click();
+            }
+        }
     }
+
+
 }
+

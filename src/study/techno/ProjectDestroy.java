@@ -67,7 +67,7 @@ public class ProjectDestroy extends BaseClass {
 //
         driver.findElement(By.cssSelector("a[data-test='addresses']")).click();
         Thread.sleep(2000);
-         WebElement chouros = driver.findElement(By.xpath("//td[contains(text(),'Atlanta')]/..//a[text()='Destroy']"));
-         chouros.click();
+         WebElement destroy = driver.findElement(By.xpath("//td[contains(text(),'Ayse')]/..//a[text()='Destroy']"));
+         destroy.click();
     }
 }
