@@ -37,5 +37,12 @@ public class Sauce extends BaseClass {
         addToCart.get(3).click();
         addToCart.get(0).click();
 
+        driver.findElement(By.xpath("//span[@class='fa-layers-counter shopping_cart_badge']")).click();
+
+        // ctrl+alt+V
+        List<WebElement> urunler = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
+        List<WebElement> removeButtons = driver.findElements(By.cssSelector("button[class='btn_secondary cart_button']"));
+
     }
 }
+
