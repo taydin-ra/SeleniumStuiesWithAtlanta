@@ -44,7 +44,7 @@ public class Sauce extends BaseClass {
         List<WebElement> urunler = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
 
         List<WebElement> removeButtons = driver.findElements(By.cssSelector("button[class='btn_secondary cart_button']"));
-        
+
         String urun = "Sauce Labs Fleece Jacket";
 
         for (int i = 0; i < urunler.size(); i++) {
