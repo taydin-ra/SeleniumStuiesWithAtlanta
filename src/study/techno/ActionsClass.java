@@ -51,6 +51,9 @@ public class ActionsClass extends BaseClass {
         WebElement searchButton = driver.findElement(By.xpath("//button[@type='submit']"));
         searchButton.click();
 
+        WebDriverWait wait=new WebDriverWait(driver,4);
+        wait.until(ExpectedConditions.invisibilityOf(searchButton));
+
         WebElement slider=driver.findElement(By.xpath("//div[@aria-labelledby='f-price-min-label']"));
 
         actions.dragAndDropBy(slider,77,0).click().perform();
@@ -59,7 +62,7 @@ public class ActionsClass extends BaseClass {
 
         WebElement sliderRight=driver.findElement(By.xpath("//div[@aria-controls='f-price-max']"));
 
-        actions.dragAndDropBy(sliderRight,-46, 0).click();
+        actions.dragAndDropBy(sliderRight,-46, 0).click().perform();
 
 //        Actions actions = new Actions(driver);
 //        driver.get("https://jqueryui.com/droppable/");
