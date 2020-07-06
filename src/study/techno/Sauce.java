@@ -1,6 +1,4 @@
 package study.techno;
-
-import com.sun.xml.internal.rngom.parse.host.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utility.BaseClass;
