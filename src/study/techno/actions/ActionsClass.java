@@ -1,4 +1,4 @@
-package study.techno;
+package study.techno.actions;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;

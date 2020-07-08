@@ -1,4 +1,4 @@
-package study.techno;
+package study.techno.locators;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package study.techno;
+package study.techno.selectClass;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
