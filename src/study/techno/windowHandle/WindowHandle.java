@@ -32,8 +32,8 @@ public class WindowHandle extends BaseClass {
         Thread.sleep(3000);
 
 
-        WebElement color=driver.findElement(By.cssSelector("div[data-component='listing-page-title-component']"));
-        System.out.println(color.getText());
+        WebElement teddyName=driver.findElement(By.cssSelector("div[data-component='listing-page-title-component']"));
+        System.out.println(teddyName.getText());
 
 
 
