@@ -8,7 +8,7 @@ import utility.BaseClass;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoaderDemo extends BaseClass {
-    
+
     public static void main(String[] args) {
 
         WebDriverWait wait=new WebDriverWait(driver,60);
