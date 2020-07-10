@@ -35,7 +35,10 @@ public class WindowHandle extends BaseClass {
         WebElement teddyName=driver.findElement(By.cssSelector("div[data-component='listing-page-title-component']"));
         System.out.println(teddyName.getText());
 
+        WebElement color=driver.findElement(By.xpath("(//select[@class='wt-select__element  variation-selector'])[1]"));
+        color.click();
 
-
+        Select select=new Select(color);
+        select.selectByIndex(1);
     }
     }
