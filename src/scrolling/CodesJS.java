@@ -32,7 +32,7 @@ public class CodesJS extends BaseClass {
 
     }
 
-    @Test
+    @Test(alwaysRun = true)
 
     public void searchFirst100Words() {
         WebElement element = driver.findElement(By.xpath("//span[text()='First 100 Words']"));
@@ -47,8 +47,8 @@ public class CodesJS extends BaseClass {
         Assert.assertEquals("12,051", reviewCount.getText());
 
     }
-
-    @Test
+//
+    @Test(priority = 2)
     void aSecondBook() {
 
         List<WebElement> books = driver.findElements(By.xpath("//span[contains(text(),'Best Seller')]/ancestor::div[@class='a-section a-spacing-medium']/div/div/div/div/div/div/div/h2/a/span"));
@@ -62,6 +62,22 @@ public class CodesJS extends BaseClass {
 
 
 
+    }
+
+    @Test
+    void divide(){
+        int a=6;
+        int b=0;
+
+        Assert.assertEquals(0,a/b);
+    }
+
+    @Test(dependsOnMethods = {"divide()"},alwaysRun = true)
+    void divide2(){
+        int a=6;
+        int b=0;
+
+      Assert.assertEquals("ssnnnnn","ssnnnnn");
     }
 
 }
