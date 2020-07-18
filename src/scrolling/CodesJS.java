@@ -48,6 +48,8 @@ public class CodesJS extends BaseClass {
 
     }
 //
+
+    // hocam burdaki locatori soruyorum? Dauke hocam
     @Test(priority = 2)
     void aSecondBook() {
 
